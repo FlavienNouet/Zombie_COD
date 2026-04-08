@@ -1,0 +1,30 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Vv]isualStudioSln.sln
+/UserSettings/
+
+# Fichiers de projet générés
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.cache
+
+# Dossiers spécifiques à VS Code ou VS
+.vs/
+.vscode/
+
+# OS générés
+.DS_Store
+Thumbs.db

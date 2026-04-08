@@ -7,7 +7,7 @@ public class Player_Gr2 : MonoBehaviour
 
     [Header("FPS Camera")]
     [SerializeField] private Transform m_CameraTransform;
-    [SerializeField] private Vector3 m_CameraOffset = new Vector3(0f, 1.65f, 0f);
+    [SerializeField] private float m_EyeHeight = 1.65f;
     [SerializeField] private float m_MouseSensitivity = 2.2f;
     [SerializeField] private float m_MaxPitch = 85f;
 
@@ -50,7 +50,8 @@ public class Player_Gr2 : MonoBehaviour
             return;
         }
 
-        m_CameraTransform.position = transform.position + transform.TransformDirection(m_CameraOffset);
+        // True FPS: camera is locked at the player's head position, never behind.
+        m_CameraTransform.position = transform.position + Vector3.up * m_EyeHeight;
     }
 
     private void UpdateLook()
